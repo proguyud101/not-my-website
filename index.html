@@ -1,7 +1,9 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kinetiq fortnite software</title>
+    <title>kinetiq software</title>
     <style>
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
@@ -13,64 +15,82 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
-:root {
-    --bg-main: #101010;
-    --bg-secondary: #9874dc;
-    --grey-dark: #191919;
-}
 
- body {
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    font-family: "Quicksand", sans-serif;
-    background-color: var(--bg-main);
-    color: white;
-    height: 220em;
-    width: auto;
-    background-image: linear-gradient(0deg, rgba(200, 200, 200, 0.04) 1px, transparent 0), linear-gradient(90deg, rgba(200, 200, 200, 0.04) 1px, transparent 0);
-    background-size: 100px 100px;
-}
+        :root {
+            --bg-main: #101010;
+            --bg-secondary: #9874dc;
+            --grey-dark: #191919;
+        }
+
+        body {
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            font-family: "Quicksand", sans-serif;
+            background-color: var(--bg-main);
+            color: white;
+            height: 220em;
+            width: auto;
+            background-image: linear-gradient(0deg, rgba(200, 200, 200, 0.04) 1px, transparent 0), linear-gradient(90deg, rgba(200, 200, 200, 0.04) 1px, transparent 0);
+            background-size: 100px 100px;
+        }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
+
         header {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-between; /* Ensures logo is on the left and nav is on the right */
             align-items: center;
             padding: 20px 0;
             animation: fadeIn 1s ease-out;
         }
+
         .logo {
             font-size: 24px;
             font-weight: bold;
         }
+
+        nav {
+            display: flex;
+            gap: 20px; /* Adds space between the nav links */
+        }
+
         nav a {
             color: #ffffff;
             text-decoration: none;
-            margin-left: 20px;
             transition: color 0.3s ease;
         }
+
         nav a:hover {
             color: #7c3aed;
         }
+
+        .buttons-container {
+            display: flex;
+            align-items: center;
+        }
+
         .hero {
             text-align: left;
             padding: 50px 0;
             animation: fadeIn 1s ease-out 0.5s both;
         }
+
         h1 {
             font-size: 48px;
             margin-bottom: 20px;
         }
+
         .subtitle {
             font-size: 18px;
             margin-bottom: 30px;
             color: #cccccc;
         }
+
         .button {
             display: inline-block;
             padding: 10px 20px;
@@ -82,43 +102,52 @@
             border: none;
             cursor: pointer;
         }
+
         .button:hover {
             background-color: #6d28d9;
             transform: translateY(-2px);
             box-shadow: 0 4px 6px rgba(124, 58, 237, 0.1);
         }
+
         .stats {
             display: flex;
             justify-content: space-between;
             margin-top: 50px;
             animation: fadeIn 1s ease-out 1s both;
         }
+
         .stat-item {
             text-align: center;
         }
+
         .stat-number {
             font-size: 36px;
             font-weight: bold;
             margin-bottom: 10px;
         }
+
         .stat-label {
             color: #cccccc;
         }
+
         footer {
             text-align: center;
             padding: 20px 0;
             margin-top: 50px;
             animation: fadeIn 1s ease-out 1.5s both;
         }
+
         footer a {
             color: #cccccc;
             text-decoration: none;
             margin: 0 10px;
             transition: color 0.3s ease;
         }
+
         footer a:hover {
             color: #7c3aed;
         }
+
         .product-card {
             background-color: #2a2a2a;
             border-radius: 10px;
@@ -128,48 +157,59 @@
             margin: 20px auto;
             animation: fadeIn 1s ease-out;
         }
+
         .product-image {
             width: 100%;
             height: 168px;
             object-fit: cover;
         }
+
         .product-info {
             padding: 15px;
         }
+
         .product-title {
             color: #7c3aed;
             font-size: 18px;
             margin: 0 0 10px 0;
         }
+
         .product-price {
             color: #ffffff;
             font-size: 16px;
             margin: 0 0 15px 0;
         }
+
         .paypal-icon {
             height: 14px;
             vertical-align: middle;
             margin-left: 5px;
         }
+
         .button-container {
             display: flex;
             justify-content: space-between;
         }
+
         .learn-more {
             background-color: transparent;
             color: #7c3aed;
             border: 1px solid #7c3aed;
         }
+
         .learn-more:hover {
             background-color: rgba(124, 58, 237, 0.1);
         }
+
         .purchase {
             background-color: #7c3aed;
             color: white;
         }
+
         .purchase:hover {
             background-color: #6d28d9;
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -182,6 +222,7 @@
             background-color: rgba(0,0,0,0.4);
             animation: fadeIn 0.3s ease-out;
         }
+
         .modal-content {
             background-color: #2a2a2a;
             margin: 15% auto;
@@ -191,6 +232,7 @@
             max-width: 400px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
+
         .close {
             color: #aaa;
             float: right;
@@ -198,11 +240,13 @@
             font-weight: bold;
             cursor: pointer;
         }
+
         .close:hover,
         .close:focus {
             color: #fff;
             text-decoration: none;
         }
+
         .subscription-option {
             display: block;
             width: 100%;
@@ -216,24 +260,11 @@
             font-size: 16px;
             transition: all 0.3s ease;
         }
+
         .subscription-option:hover {
             background-color: #4a4a4a;
             transform: translateY(-2px);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .reviews {
-            background-image: url('/mnt/data/image.png');
-            background-size: cover;
-            background-position: center;
-            padding: 50px;
-            border-radius: 10px;
-            margin: 20px 0;
-            text-align: center;
-            color: #fff;
-        }
-        .stars {
-            font-size: 24px;
-            color: #ffd700;
         }
     </style>
 </head>
@@ -244,134 +275,51 @@
             <nav>
                 <a href="#" onclick="showPage('home')">Home</a>
                 <a href="#" onclick="showPage('explore')">Purchase</a>
-                <a href="#" onclick="showPage('about')">About</a>
+                <a href="https://discord.gg/mTXKpUWFUN" class="button" target="_blank">Join Discord</a>
             </nav>
         </header>
         <main id="main-content">
-                        <section class="hero">
-                            <h1>welcome to kinetiq!</h1>
-                            <p class="subtitle">Your gateway to the future of fortnite cheating software.</p>
-                            <button class="button" onclick="showPage('explore')">Buy Now</button>
-                        </section>
-                        <section class="stats">
-                            <div class="stat-item">
-                                <div class="stat-number">500+</div>
-                                <div class="stat-label">Downloads</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">200+</div>
-                                <div class="stat-label">Reviews</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Satisfaction</div>
-                            </div>
-                        </section>
-                    </main>
-        <footer>
-            <a href="#">Terms of Service</a>
-            <a href="#">Privacy Policy</a>
-        </footer>
-    </div>
-
-    <div id="subscriptionModal" class="modal">
-        <div class="modal-content">
-            <span class="close">×</span>
-            <h2>Choose Your Subscription</h2>
-            <button class="subscription-option" data-sellsn-sid="a294f9a1-0bce-43b2-b4af-b69199c33c53" data-sellsn-pid="935d16c6-2814-4034-bb13-dd9689804df5">Week Sub: €10</button>
-            <button class="subscription-option" data-sellsn-sid="a294f9a1-0bce-43b2-b4af-b69199c33c53" data-sellsn-pid="a59dccbd-ccfa-4b57-9078-29f88a348174">Month Sub: €25</button>
-            <button class="subscription-option" data-sellsn-sid="a294f9a1-0bce-43b2-b4af-b69199c33c53" data-sellsn-pid="01e8cee7-9658-4d64-acdf-222ede847db4">Three Month Sub: €50</button>
-            <button class="subscription-option" data-sellsn-sid="a294f9a1-0bce-43b2-b4af-b69199c33c53" data-sellsn-pid="d05523d0-4b45-4e7f-baa5-34efb932315c">Six Month Sub: €75</button>
-            <button class="subscription-option" data-sellsn-sid="a294f9a1-0bce-43b2-b4af-b69199c33c53" data-sellsn-pid="2ab4b80e-36da-4249-bcac-f274d3b8083c">Year Sub: €100</button>
-            <button class="subscription-option" data-sellsn-sid="a294f9a1-0bce-43b2-b4af-b69199c33c53" data-sellsn-pid="4065257f-9841-48a7-8771-667fe39163d3">Lifetime Sub: €200</button>
-        </div>
+            <section class="hero">
+                <h1>Welcome to kinetiq!</h1>
+                <p class="subtitle">Your gateway to the future of Fortnite cheating software.</p>
+                <button class="button" onclick="showPage('explore')">Buy Now</button>
+            </section>
+            <section class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Downloads</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Reviews</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script>
         function showPage(page) {
-            const mainContent = document.getElementById('main-content');
-            switch(page) {
-                case 'home':
-                    mainContent.innerHTML = `
-                        <section class="hero">
-                            <h1>Welcome to Neoteric!</h1>
-                            <p class="subtitle">Your gateway to the future of DMA software.</p>
-                            <button class="button" onclick="showPage('explore')">Buy Now</button>
-                        </section>
-                        <section class="stats">
-                            <div class="stat-item">
-                                <div class="stat-number">500+</div>
-                                <div class="stat-label">Downloads</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">200+</div>
-                                <div class="stat-label">Reviews</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Satisfaction</div>
-                            </div>
-                        </section>
-                    `;
-                    break;
-                case 'explore':
-                    mainContent.innerHTML = `
-                        <h1>Explore Our Products</h1>
-                        <div class="product-card">
-                            <img src="https://www.ingame.de/assets/images/33/765/33765977-das-logo-von-fortnite-auf-einem-bunten-hintergrund-mit-elementen-aus-dem-spiel-3jea.jpg" alt="Product Image" class="product-image">
-                            <div class="product-info">
-                                <h2 class="product-title">Neoteric Dma Software</h2>
-                                <p class="product-price">€10<img src="https://cdn-icons-png.flaticon.com/512/174/174861.png" alt="PayPal" class="paypal-icon"></p>
-                                <div class="button-container">
-                                    <button class="button learn-more">Learn More</button>
-                                    <button class="button purchase" onclick="showSubscriptionModal()">Purchase</button>
-                                </div>
+            if (page === 'explore') {
+                document.getElementById("main-content").innerHTML = `
+                    <h1>Explore Our Products</h1>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/300x168" alt="Product Image" class="product-image">
+                        <div class="product-info">
+                            <p class="product-title">Kinetiq X</p>
+                            <p class="product-price">$99.99 <img src="https://via.placeholder.com/16x16" alt="Paypal Logo" class="paypal-icon"> </p>
+                            <div class="button-container">
+                                <button class="button learn-more">Learn More</button>
+                                <button class="button purchase">Buy Now</button>
                             </div>
                         </div>
-                        <section class="reviews">
-                            <h2>Customer Review</h2>
-                            <div class="stars">
-                                ★★★★★
-                            </div>
-                            <p>"Everything works perfect. Loader is easy to download, prediction on aimbot is great."</p>
-                        </section>
-                    `;
-                    break;
-                case 'about':
-                    mainContent.innerHTML = `
-                        <h1>About Neoteric</h1>
-                        <p>At Neoteric, we are dedicated to providing the best DMA software solutions to help you stay ahead of the curve. Our team of experts works tirelessly to innovate and improve our products, ensuring you get the most out of your experience.</p>
-                    `;
-                    break;
+                    </div>
+                `;
             }
         }
-
-        function showSubscriptionModal() {
-            const modal = document.getElementById('subscriptionModal');
-            modal.style.display = 'block';
-        }
-
-        function selectSubscription(type, price) {
-
-
-        }
-
-        document.querySelector('.close').onclick = function() {
-            const modal = document.getElementById('subscriptionModal');
-            modal.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('subscriptionModal');
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        // Initialize the home page content
-        showPage('home');
     </script>
-<script type="text/javascript" src="js/embed.min.js"></script>
-
-
-</body></html>
+</body>
+</html>
